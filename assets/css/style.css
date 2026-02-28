@@ -1,0 +1,201 @@
+/* 
+Version 1.1
+Autor: Jan Zeller 
+*/
+
+/* ------------ RESET ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------- VARIABLES -------------- */
+:root {
+    font-size: 18px;
+
+    /* colors */
+    --orange: #FF9527;
+    --blue: #375470;
+    --gray: #60615B;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* typography */
+    --font-primary: 'Syne';
+    --font-text: 'helvetica-lt-pro';
+
+    /* spacing */
+    --xs-space: 8px;
+    --s-space: 16px;
+    --m-space: 24px;
+    --l-space: 32px;
+    --xl-space: 64px;
+    --xxl-space: 128px;
+}
+
+
+/* -------- TYPOGRAPHY ----------  */
+body {
+    font-family: var(--font-text), sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-primary), sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* buttons with hover */
+a.button-light,
+a.button-dark:hover {
+    display: inline-block;
+    padding: 12px var(--s-space);
+    background-color: var(--orange);
+    color: var(--black);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+a.button-dark,
+a.button-light:hover {
+    display: inline-block;
+    padding: 12px var(--s-space);
+    background-color: transparent;
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ------------- HEADER ---------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--l-space) var(--xl-space);
+    background-color: var(--black);
+
+    & img {
+        max-height: 20px;
+    }
+
+    & nav ul {
+        display: flex;
+        gap: var(--l-space);
+
+        & li {
+            list-style-type: none;
+
+            & a {
+                color: var(--orange);
+
+                &::before {
+                    content: "\276F" " ";
+                    opacity: 0;
+                    transition: opacity .1s ease-in-out;
+                }
+            }
+
+            &:hover a {
+                color: var(--white);
+                text-decoration: none;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* ------------- MAIN ---------------- */
+main>section:nth-of-type(odd) {
+    background-color: var(--black);
+}
+
+
+/* ------------- FOOTER -------------- */
+footer {
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--xl-space);
+    color: var(--white);
+    font-size: 0.8rem;
+
+    & .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--m-space);
+        font-weight: lighter;
+
+        & p {
+            color: var(--orange);
+
+        }
+
+        & ul {
+            display: flex;
+            gap: var(--m-space);
+
+            & li {
+                list-style-type: none;
+
+                & a {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    & .socials {
+        display: flex;
+        gap: var(--m-space);
+
+        & i::before {
+            color: var(--white);
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+
+    & .copyright {
+        color: var(--gray);
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-space);
+
+
+        & address {
+            font-style: normal;
+
+            & a {
+                color: var(--gray);
+            }
+        }
+
+    }
+}
+
+
+
+
+/* ######## MOBILE MEDIA QUERY ############ */
+@media screen and (max-width: 480px) {
+    :root {
+        font-size: 16px;
+    }
+}
