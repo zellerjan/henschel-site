@@ -1,4 +1,4 @@
-# Responsive Design Modul
+# 🚂 Responsive Design Modul
 This project was created over 4 days in the Module Responsive Design at the SfGZ.
 
 ## Task
