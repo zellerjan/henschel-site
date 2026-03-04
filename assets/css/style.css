@@ -107,8 +107,8 @@ a {
 }
 
 /* buttons with hover */
-a.button-light,
-a.button-dark:hover {
+.button-light,
+.button-dark:hover {
     display: inline-block;
     padding: 12px var(--s-space);
     background-color: var(--orange);
@@ -126,8 +126,8 @@ a.button-dark:hover {
     }
 }
 
-a.button-dark,
-a.button-light:hover {
+.button-dark,
+.button-light:hover {
     display: inline-block;
     padding: 12px var(--s-space);
     background-color: transparent;
@@ -206,7 +206,7 @@ main>section {
         margin: 0 auto;
     }
 
-    & h2 + h4 {
+    & h2+h4 {
         color: var(--gray);
     }
 }
@@ -239,14 +239,21 @@ section.quote {
         flex-direction: column;
         gap: var(--l-space);
     }
-    
+
     & h4 {
         max-width: 60%;
     }
 }
 
-section.features {
+section.logos {
+    & img {
+        width: auto;
+        height: 80px;
+        object-fit: cover;
+    }
+}
 
+section.features {
 
     & div.gallery {
         display: grid;
@@ -265,18 +272,22 @@ section.features {
             grid-row: 1 / span 2;
             grid-column: 1 / span 2;
         }
+
         & .pic-controls {
             grid-row: 2 / span 3;
             grid-column: 3;
         }
+
         & .pic-coupling {
             grid-row: 4 / span 2;
             grid-column: 1;
         }
+
         & .pic-wheels {
             grid-row: 3 / span 2;
             grid-column: 2;
         }
+
         & .pic-motor {
             grid-row: 5 / span 2;
             grid-column: 2 / span 2;
