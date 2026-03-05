@@ -195,15 +195,31 @@ header {
 
 /* ------------- MAIN ---------------- */
 main>section {
-    padding: var(--xxl-space) 0;
+    padding: var(--xxl-space) var(--s-space);
 
     &:nth-of-type(odd) {
         background-color: var(--black);
+
+        & > *, h2 + h4 {
+            color: var(--white);
+        }
     }
 
     & .wrapper {
         max-width: 1000px;
-        margin: 0 auto;
+        margin: var(--l-space) auto;
+        display: flex;
+        flex-direction: column;
+
+        & .section-content {
+            margin: var(--m-space) 0;
+            display: flex;
+            gap: var(--s-space);
+        }
+
+        & .button-light, .button-dark {
+            align-self: flex-end;
+        }
     }
 
     & h2+h4 {
@@ -243,6 +259,10 @@ section.quote {
     & h4 {
         max-width: 60%;
     }
+
+    & a.button-light {
+        align-self: auto;
+    }
 }
 
 section.logos {
@@ -254,6 +274,31 @@ section.logos {
 }
 
 section.features {
+
+    & .section-content {
+        flex-wrap: wrap;
+    }
+
+    & article {
+        width: calc(50% - var(--xs-space));
+        border: 1px solid var(--orange);
+        padding: var(--l-space) var(--s-space);
+        display: flex;
+        gap: var(--s-space);
+
+        & i::before {
+            font-size: 40px;
+            color: var(--orange);
+        }
+
+        & p.feature-title {
+            font-size: 20px;
+            font-weight: normal;
+            font-style: italic;
+            color: var(--orange);
+        }
+
+    }
 
     & div.gallery {
         display: grid;
