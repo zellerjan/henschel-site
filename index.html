@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Henschel | No Fluff – Real Traction</title>
+  <title>Henschel | DHG 700 C</title>
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
@@ -24,8 +24,9 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
-    <img src="assets/img/logo-white.png" alt="Henschel Logo in White" class="logo" />
+    <a href="#top"><img src="assets/img/logo-white.png" alt="Henschel Logo in White" class="logo" /></a>
 
     <nav class="main-nav">
       <ul>
@@ -39,7 +40,7 @@
   </header>
 
   <main>
-
+    <!-- SECTION HERO -->
     <section class="hero">
       <h2 class="title"><span>Real Traction.</span><br />No Fluff</h2>
 
@@ -53,7 +54,7 @@
       </div>
     </section>
 
-
+    <!-- SECTION QUOTE -->
     <section class="quote">
       <div class="wrapper">
         <h4 class="quote">
@@ -64,13 +65,16 @@
       </div>
     </section>
 
+    <!-- scroll to top button  -->
+    <a href="#top" class="top" title="To Top!"><i class="iconoir-dot-arrow-up"></i></a>
 
+    <!-- SECTION PARTNER LOGOS -->
     <section class="logos">
       <div class="wrapper">
 
         <p>Trusted by those who move the world</p>
 
-        <div class="carousel">
+        <di-v class="carousel">
           <img src="assets/img/partner-logo/airbus.png" alt="Airbus Logo">
           <img src="assets/img/partner-logo/audi.jpg" alt="Audi Logo">
           <img src="assets/img/partner-logo/aws.jpg" alt="AWS Logo">
@@ -82,11 +86,11 @@
           <img src="assets/img/partner-logo/sbb.png" alt="SBB Logo">
           <img src="assets/img/partner-logo/seahawks.png" alt="Seahawks Logo">
           <img src="assets/img/partner-logo/vw.jpg" alt="VW Logo">
-        </div>
+        </di-v>
       </div>
     </section>
 
-
+    <!-- SECTION FEATURES -->
     <section class="features" id="features">
       <div class="wrapper">
 
@@ -142,6 +146,7 @@
         <a href="#contact" class="button-light">Talk to an engineer</a>
       </div>
 
+      <!-- gallery  -->
       <div class="gallery">
         <figure class="pic-track">
           <img src="assets/img/full-locomotive-picture.png" alt="picture of the Henschel DHG 700C on track in action" />
@@ -164,7 +169,7 @@
       </div>
     </section>
 
-
+    <!-- SECTION USE CASES  -->
     <section class="useCases" id="useCases">
       <div class="wrapper">
 
@@ -213,7 +218,7 @@
       </div>
     </section>
 
-
+    <!-- SECTION ABOUT US -->
     <section class="legacy" id="legacy">
       <div class="wrapper">
 
@@ -223,19 +228,21 @@
         <div class="section-content">
           <img src="assets/img/logo-orange.png" alt="Henschel Logo in orange" />
 
-          <p>Henschel has defined European rail logistics since 1848. The DHG 700 C is the peak of this evolution: a
-            5th-generation diesel-hydraulic powerhouse, engineered for the extreme conditions of steel mills and
-            chemical
-            plants.</p>
-          <p>No gimmicks, no planned obsolescence – just 77 tons of mechanical precision designed for a half-century
-            lifecycle.</p>
-          <b>Built to work. Built to last.</b>
+          <article class="about-text">
+            <p>Henschel has defined European rail logistics since 1848. The DHG 700 C is the peak of this evolution: a
+              5th-generation diesel-hydraulic powerhouse, engineered for the extreme conditions of steel mills and
+              chemical
+              plants.</p>
+            <p>No gimmicks, no planned obsolescence – just 77 tons of mechanical precision designed for a half-century
+              lifecycle.</p>
+            <b>Built to work. Built to last.</b>
+          </article>
         </div>
         <a href="#contact" class="button-light">Secure the legacy</a>
       </div>
     </section>
 
-
+    <!-- SECTION CONTACT -->
     <section class="contact" id="contact">
       <div class="wrapper">
 
@@ -246,17 +253,25 @@
           entity.</p>
 
         <form action="#">
-          <label for="name">/ Name*</label>
-          <input type="text" name="name" id="name" required>
+          <div class="first-row">
+            <div class="name">
+              <label for="name">/ Name*</label>
+              <input type="text" name="name" id="name" required>
+            </div>
 
-          <label for="company">/ Company*</label>
-          <input type="text" name="company" id="company" required>
-
-          <label for="email">/ Email*</label>
-          <input type="email" name="email" id="email" required>
-
-          <label for="message">/ Message*</label>
-          <textarea name="message" id="message" required></textarea>
+            <div class="company">
+              <label for="company">/ Company*</label>
+              <input type="text" name="company" id="company" required>
+            </div>
+            <div class="email">
+              <label for="email">/ Email*</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+          </div>
+          <div class="message">
+            <label for="message">/ Message*</label>
+            <textarea name="message" id="message" required rows="7"></textarea>
+          </div>
 
           <input type="submit" class="button-dark" value="&#10095;&#8192;initialize contact">
         </form>
@@ -265,6 +280,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-nav">
       <nav class="site-nav">
@@ -295,7 +311,7 @@
     <div class="copyright">
       <p>
         &copy; 2026 Henschel Locomotive Works.<br />
-        Built in Kassel. Designed for Longevity.
+        Built in Kassel. Designed for Longevity.<br />
       </p>
       <address>
         Falderbaumstrasse 34<br />

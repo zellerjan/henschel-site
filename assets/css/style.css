@@ -34,10 +34,26 @@ Autor: Jan Zeller
     --xxl-space: 128px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /* -------- TYPOGRAPHY ----------  */
 body {
     font-family: var(--font-text), sans-serif;
+    position: relative;
+}
+
+a.top {
+    position: sticky;
+    top: 91vh;
+    left: 91vw;
+    font-size: 1.5rem;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    display: inline-flex;
+    padding: var(--xs-space);
+
 }
 
 h1,
@@ -143,7 +159,6 @@ a {
     &::before {
         content: "\276F" "\2000";
     }
-
 }
 
 
@@ -154,6 +169,8 @@ header {
     align-items: center;
     padding: var(--l-space) var(--xl-space);
     background-color: var(--black);
+    position: sticky;
+    top: 0;
 
     & img {
         max-height: 20px;
@@ -200,8 +217,10 @@ main>section {
     &:nth-of-type(odd) {
         background-color: var(--black);
 
-        & > *, h2 + h4 {
+        &>*,
+        h2+h4 {
             color: var(--white);
+            margin-bottom: var(--m-space);
         }
     }
 
@@ -212,21 +231,25 @@ main>section {
         flex-direction: column;
 
         & .section-content {
-            margin: var(--m-space) 0;
+            margin: var(--l-space) 0;
             display: flex;
             gap: var(--s-space);
         }
 
-        & .button-light, .button-dark {
+        & .button-light,
+        .button-dark {
             align-self: flex-end;
         }
     }
 
     & h2+h4 {
         color: var(--gray);
+        margin-bottom: var(--m-space);
+
     }
 }
 
+/* ----- HERO SECTION */
 section.hero {
     background-image: url('../img/isometric-picture.png');
     background-repeat: no-repeat;
@@ -249,6 +272,7 @@ section.hero {
 
 }
 
+/* -------- QUOTE SECTION  */
 section.quote {
     & .wrapper {
         display: flex;
@@ -265,6 +289,7 @@ section.quote {
     }
 }
 
+/* ---------- LOGO SECTION */
 section.logos {
     & img {
         width: auto;
@@ -273,6 +298,7 @@ section.logos {
     }
 }
 
+/* ------------- FEATURE SECTION  */
 section.features {
 
     & .section-content {
@@ -340,13 +366,102 @@ section.features {
     }
 }
 
+/* ---------- USE CASES SECTION  */
+section.useCases {
+
+    & div.section-content {
+        flex-direction: column;
+        gap: var(--m-space);
+    }
+
+    & article.useCase {
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        &:nth-of-type(even) {
+            align-self: flex-end;
+        }
+
+        & h4.quote {
+            font-weight: bold;
+        }
+
+        & i {
+            margin-top: var(--s-space);
+            font-weight: lighter;
+            font-size: 0.88rem;
+            align-self: flex-end;
+        }
+
+    }
+}
+
+/* ----------- LEGACY SECTION */
+section.legacy {
+
+    & div.section-content {
+        gap: var(--xl-space);
+
+        & img {
+            max-width: 200px;
+            height: 100%;
+        }
+
+        & article.about-text {
+            display: flex;
+            flex-direction: column;
+            gap: var(--m-space);
+        }
+    }
+}
+
+/* ------------- CONTACT SECTION  */
+section.contact {
+    form {
+        margin: var(--m-space) 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--m-space);
+
+        & div.first-row {
+            display: flex;
+            gap: var(--m-space);
+
+            & div {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: var(--xs-space);
+            }
+        }
+
+        & div.message {
+            display: flex;
+            flex-direction: column;
+            gap: var(--xs-space);
+        }
+
+        & input,
+        textarea {
+            background-color: transparent;
+            border: 1px solid var(--orange);
+            min-height: 32px;
+        }
+
+        & label {
+            color: var(--orange);
+            font-weight: lighter;
+        }
+    }
+}
 
 /* ------------- FOOTER -------------- */
 footer {
     background-color: var(--black);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    ;
     padding: var(--xl-space);
     color: var(--white);
     font-size: 0.8rem;
@@ -393,13 +508,13 @@ footer {
         flex-direction: column;
         gap: var(--s-space);
 
+        & a {
+            text-decoration: underline;
+            color: var(--gray);
+        }
 
         & address {
             font-style: normal;
-
-            & a {
-                color: var(--gray);
-            }
         }
 
     }
