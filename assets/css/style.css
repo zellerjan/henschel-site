@@ -291,10 +291,32 @@ section.quote {
 
 /* ---------- LOGO SECTION */
 section.logos {
-    & img {
-        width: auto;
-        height: 80px;
+    
+    & div.wrapper {
+        gap: var(--m-space);
+    }
+
+    & .splide__track ul {
+        display: flex;
+        align-items: center;
+
+        & img {
+        width: 100px;
+        height: auto;
         object-fit: cover;
+    }
+    }
+
+    button.splide__toggle {
+        background: none;
+        outline: none;
+        border: none;
+        margin-top: var(--m-space);
+
+        & i {
+            color: var(--gray);
+            font-size: 1.5rem;
+        }
     }
 }
 

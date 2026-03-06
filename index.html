@@ -21,6 +21,9 @@
 
   <!-- add iconoir for icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+
+  <!-- add splide css for carousel -->
+  <link rel="stylesheet" href="assets/css/splide-default.min.css">
 </head>
 
 <body>
@@ -74,21 +77,43 @@
 
         <p>Trusted by those who move the world</p>
 
-        <di-v class="carousel">
-          <img src="assets/img/partner-logo/airbus.png" alt="Airbus Logo">
-          <img src="assets/img/partner-logo/audi.jpg" alt="Audi Logo">
-          <img src="assets/img/partner-logo/aws.jpg" alt="AWS Logo">
-          <img src="assets/img/partner-logo/bayer.png" alt="Bayer Logo">
-          <img src="assets/img/partner-logo/disney.png" alt="Disney Logo">
-          <img src="assets/img/partner-logo/fedex.jpg" alt="FedEx Logo">
-          <img src="assets/img/partner-logo/ikea.png" alt="Ikea Logo">
-          <img src="assets/img/partner-logo/lego.jpg" alt="Lego Logo">
-          <img src="assets/img/partner-logo/sbb.png" alt="SBB Logo">
-          <img src="assets/img/partner-logo/seahawks.png" alt="Seahawks Logo">
-          <img src="assets/img/partner-logo/vw.jpg" alt="VW Logo">
-        </di-v>
+        <section class="splide" aria-label="Splide Carousel with Partner-Logos">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><a href="https://www.airbus.com/en" target="_blank"><img
+                    src="assets/img/partner-logo/airbus.png" alt="Airbus Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.audi.ch/de/" target="_blank"><img
+                    src="assets/img/partner-logo/audi.jpg" alt="Audi Logo"></a></li>
+              <li class="splide__slide"><a href="https://aws.amazon.com/de/" target="_blank"><img
+                    src="assets/img/partner-logo/aws.jpg" alt="AWS Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.bayer.com/de/ch/schweiz-startseite" target="_blank"><img
+                    src="assets/img/partner-logo/bayer.png" alt="Bayer Logo"></a></li>
+              <li class="splide__slide"><a href="https://thewaltdisneycompany.com/" target="_blank"><img
+                    src="assets/img/partner-logo/disney.png" alt="Disney Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.fedex.com/en-ch/home.html" target="_blank"><img
+                    src="assets/img/partner-logo/fedex.jpg" alt="FedEx Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.lego.com/" target="_blank"><img
+                    src="assets/img/partner-logo/lego.jpg" alt="Lego Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.ikea.com/" target="_blank"><img
+                    src="assets/img/partner-logo/ikea.png" alt="Ikea Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.sbb.ch/de" target="_blank"><img
+                    src="assets/img/partner-logo/sbb.png" alt="SBB Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.seahawks.com/" target="_blank"><img
+                    src="assets/img/partner-logo/seahawks.png" alt="Seahawks Logo"></a></li>
+              <li class="splide__slide"><a href="https://www.volkswagen.ch/de.html" target="_blank"><img
+                    src="assets/img/partner-logo/vw.png" alt="VW Logo"></a></li>
+            </ul>
+          </div>
+          <button class="splide__toggle" type="button">
+            <span class="splide__toggle__play"><i class="iconoir-play"></i></span>
+            <span class="splide__toggle__pause"><i class="iconoir-pause"></i></span>
+          </button>
+        </section>
       </div>
+
     </section>
+
+
 
     <!-- SECTION FEATURES -->
     <section class="features" id="features">
@@ -320,6 +345,26 @@
       </address>
     </div>
   </footer>
+
+  <!-- add splide js for carousel -->
+  <script src="assets/js/splide.min.js"></script>
+
+  <script>
+
+    new Splide('.splide', {
+      type: 'loop',
+      fixedWidth: '200px',
+      gap: '24px',
+      arrows: false,
+      pagination: false,
+      autoplay: true,
+      interval: 1500,
+      pauseOnHover: false,
+      perMove: 1,
+      easing: 'ease',
+    }).mount();
+
+  </script>
 </body>
 
 </html>
