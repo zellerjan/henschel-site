@@ -39,7 +39,10 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <i class="iconoir-menu burger-icon"></i>
+    <div class="nav-burger">
+      <i class="iconoir-menu open"></i>
+      <i class="iconoir-xmark close"></i>
+    </div>
   </header>
 
   <main>
@@ -127,7 +130,7 @@
             <i class="iconoir-flash"></i>
             <div class="text">
               <p class="feature-title">Zero Latency</p>
-              <p>F
+              <p>
                 No cloud outages, no system updates. Just raw mechanical power
                 that delivers exactly when you push the lever.
               </p>
@@ -346,6 +349,9 @@
     </div>
   </footer>
 
+  <!-- add script.js for burger menu -->
+  <script src="assets/js/script.js"></script>
+
   <!-- add splide js for carousel -->
   <script src="assets/js/splide.min.js"></script>
 
@@ -354,7 +360,6 @@
     new Splide('.splide', {
       type: 'loop',
       fixedWidth: '200px',
-      gap: '24px',
       arrows: false,
       pagination: false,
       autoplay: true,
