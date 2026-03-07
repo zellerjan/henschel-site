@@ -42,6 +42,11 @@ html {
     outline: 2px solid var(--orange);
 }
 
+::selection {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
 /* -------- TYPOGRAPHY ----------  */
 body {
     font-family: var(--font-text), sans-serif;
@@ -196,6 +201,7 @@ header {
     background-color: var(--black);
     position: sticky;
     top: 0;
+    height: 90px;
 
     & a {
         z-index: 1;
@@ -243,6 +249,7 @@ header {
 main>section {
     padding: var(--xxl-space) var(--m-space);
 
+
     &:nth-of-type(odd) {
         background-color: var(--black);
 
@@ -258,6 +265,7 @@ main>section {
         margin: var(--l-space) auto;
         display: flex;
         flex-direction: column;
+
 
         & .section-content {
             margin: var(--l-space) 0;
@@ -284,7 +292,7 @@ section.hero {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
-    height: calc(100vh - 85px);
+    height: calc(100vh - 90px);
 
     padding: var(--xxl-space) var(--xl-space);
     display: grid;
@@ -373,11 +381,23 @@ section.features {
             color: var(--orange);
         }
 
-        & p.feature-title {
-            font-size: 20px;
-            font-weight: normal;
-            font-style: italic;
-            color: var(--orange);
+        & div.text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+
+            & p.feature-title {
+                font-size: 20px;
+                font-weight: normal;
+                font-style: italic;
+                color: var(--orange);
+            }
+
+            & hr {
+                border: 1px solid var(--orange);
+                max-width: 75px;
+            }
         }
 
     }
@@ -522,7 +542,7 @@ section.contact {
         }
 
         & div:not(.first-row):has(input:not([type=submit]):focus,
-        textarea:focus) label {
+            textarea:focus) label {
             color: var(--white);
         }
     }
@@ -648,7 +668,6 @@ footer {
 
     /* BURGER MENU  */
     header {
-        height: 95.2px;
 
         /* Navigation */
         & .nav-burger {
@@ -823,5 +842,27 @@ footer {
 @media screen and (max-width: 480px) {
     :root {
         font-size: 16px;
+    }
+}
+
+
+/* ------------------- ANIMATIONS --------------------- */
+div.scroll-watcher {
+    position: fixed;
+    top: 90;
+    height: 2px;
+    background-color: var(--orange);
+    width: 100%;
+    z-index: 10;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
     }
 }
