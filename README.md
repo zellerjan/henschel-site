@@ -6,7 +6,7 @@ This project was created over 4 days in the Module Responsive Design at the SfGZ
 > Create a Visual Design and a HTML / CSS prototype of a randomized Wikipedia-Article.
 
 I got the article of the **Henschel DHG 700C**. Check out the full article here: 
-[Henschel DHG 700C]([url](https://de.wikipedia.org/wiki/Henschel_DHG_700_C#)).
+[Henschel DHG 700C](https://de.wikipedia.org/wiki/Henschel_DHG_700_C#).
 
 
 ### Concept & Design
