@@ -202,6 +202,7 @@ header {
     position: sticky;
     top: 0;
     height: 90px;
+    z-index: 1;
 
     & a {
         z-index: 1;
@@ -290,7 +291,7 @@ main>section {
 section.hero {
     background-image: url('../img/isometric-picture.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 50%;
     background-size: 60%;
     height: calc(100vh - 90px);
 
@@ -298,6 +299,10 @@ section.hero {
     display: grid;
     grid-template-columns: 8fr 4fr;
     column-gap: var(--s-space);
+
+    transition: background-size 1.5s cubic-bezier(0.23, 1, 0.32, 1),
+        background-position 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: background-position, background-size;
 
     & div {
         justify-content: flex-end;
@@ -525,6 +530,8 @@ section.contact {
             min-height: 32px;
             color: var(--white);
             padding: var(--xs-space);
+            font-family: var(--font-text);
+            font-size: 1rem;
 
             &:hover {
                 border: 1px solid var(--white);
@@ -604,10 +611,6 @@ footer {
         flex-direction: column;
         gap: var(--s-space);
 
-        & p {
-            position: static;
-        }
-
         & a {
             text-decoration: underline;
             color: var(--gray);
@@ -685,12 +688,12 @@ footer {
             display: none;
             position: fixed;
             top: 0;
-            left: 0;
+            left: 100vw;
             background: var(--black);
             height: 100vh;
             width: 100%;
             align-items: center;
-            padding: 0 var(--xl-space)
+            padding: 0 var(--xl-space);
         }
 
         & nav ul {
@@ -715,6 +718,8 @@ footer {
 
         &.expanded nav {
             display: flex;
+            animation: .5s burger-menu-in ease-in;
+            animation-fill-mode: forwards;
         }
     }
 
@@ -727,8 +732,10 @@ footer {
     body:has(header.expanded) {
         overflow: hidden;
 
-        & #splide01 {
+        & #splide01,
+        div.socials {
             visibility: hidden;
+            transition: all .3s linear;
         }
 
         & footer {
@@ -736,8 +743,12 @@ footer {
 
                 & p {
                     position: fixed;
+                    width: 225px;
                     top: 90vh;
-                    left: calc(50vw - 110px);
+                    left: 100vw;
+                    z-index: 1;
+                    animation: .5s burger-menu-footer ease-in;
+                    animation-fill-mode: forwards;
                 }
             }
         }
@@ -759,8 +770,8 @@ footer {
         }
     }
 
-
     section.hero {
+        background-position: 50% 30%;
         grid-template-columns: 1fr;
         padding: var(--m-space);
         background-size: 100%;
@@ -845,6 +856,12 @@ footer {
     }
 }
 
+@media screen and (min-width: 1500px) {
+    section.hero {
+        background-size: 45%;
+    }
+}
+
 
 /* ------------------- ANIMATIONS --------------------- */
 div.scroll-watcher {
@@ -865,4 +882,23 @@ div.scroll-watcher {
     to {
         scale: 1 1;
     }
+}
+
+@keyframes burger-menu-in {
+    to {
+        left: 0;
+    }
+}
+
+@keyframes burger-menu-footer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        left: calc(50vw - 110px);
+
+    }
+
 }
