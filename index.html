@@ -180,22 +180,22 @@
 
       <!-- gallery  -->
       <div class="gallery">
-        <figure class="pic-track">
+        <figure class="pic-track" data-tilt>
           <img src="assets/img/full-locomotive-picture.png" alt="picture of the Henschel DHG 700C on track in action" />
         </figure>
-        <figure class="pic-controls">
+        <figure class="pic-controls" data-tilt>
           <img src="assets/img/controls-picture.png"
             alt="photo of the controlstand with levers an knobs of the Henschel DHG 700C" />
         </figure>
-        <figure class="pic-coupling">
+        <figure class="pic-coupling" data-tilt>
           <img src="assets/img/coupling-picture.png"
             alt="close up picture of the C-Coupling design of the Henschel DHG 700C" />
         </figure>
-        <figure class="pic-motor">
+        <figure class="pic-motor" data-tilt>
           <img src="assets/img/motor-picture.png"
             alt="close up picture of the motor of the Henschel DHG700C locomotive" />
         </figure>
-        <figure class="pic-wheels">
+        <figure class="pic-wheels" data-tilt>
           <img src="assets/img/wheels-picture.png" alt="close up picture of 3-axis wheels on track" />
         </figure>
       </div>
@@ -353,27 +353,18 @@
     </div>
   </footer>
 
-  <!-- add script.js for burger menu -->
-  <script src="assets/js/script.js"></script>
+  <!-- add jquery -->
+  <script src="assets/js/jquery.js"></script>
 
   <!-- add splide js for carousel -->
   <script src="assets/js/splide.min.js"></script>
 
-  <script>
+  <!-- add Tilt.js -->
+  <script src="assets/js/tilt.jquery.js"></script>
 
-    new Splide('.splide', {
-      type: 'loop',
-      fixedWidth: '200px',
-      arrows: false,
-      pagination: false,
-      autoplay: true,
-      interval: 1500,
-      pauseOnHover: false,
-      perMove: 1,
-      easing: 'ease',
-    }).mount();
+  <!-- add script.js for settings and burger -->
+  <script src="assets/js/script.js"></script>
 
-  </script>
 </body>
 
 </html>

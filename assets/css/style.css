@@ -202,6 +202,7 @@ header {
     position: sticky;
     top: 0;
     height: 90px;
+    z-index: 1;
 
     & a {
         z-index: 1;
@@ -290,7 +291,7 @@ main>section {
 section.hero {
     background-image: url('../img/isometric-picture.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 50%;
     background-size: 60%;
     height: calc(100vh - 90px);
 
@@ -298,6 +299,10 @@ section.hero {
     display: grid;
     grid-template-columns: 8fr 4fr;
     column-gap: var(--s-space);
+
+    transition: background-size 1.5s cubic-bezier(0.23, 1, 0.32, 1),
+        background-position 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: background-position, background-size;
 
     & div {
         justify-content: flex-end;
@@ -525,6 +530,8 @@ section.contact {
             min-height: 32px;
             color: var(--white);
             padding: var(--xs-space);
+            font-family: var(--font-text);
+            font-size: 1rem;
 
             &:hover {
                 border: 1px solid var(--white);
@@ -603,10 +610,6 @@ footer {
         display: flex;
         flex-direction: column;
         gap: var(--s-space);
-
-        /* & p {
-            position: static;
-        } */
 
         & a {
             text-decoration: underline;
@@ -729,7 +732,8 @@ footer {
     body:has(header.expanded) {
         overflow: hidden;
 
-        & #splide01, div.socials {
+        & #splide01,
+        div.socials {
             visibility: hidden;
             transition: all .3s linear;
         }
@@ -742,6 +746,7 @@ footer {
                     width: 225px;
                     top: 90vh;
                     left: 100vw;
+                    z-index: 1;
                     animation: .5s burger-menu-footer ease-in;
                     animation-fill-mode: forwards;
                 }
@@ -765,8 +770,8 @@ footer {
         }
     }
 
-
     section.hero {
+        background-position: 50% 30%;
         grid-template-columns: 1fr;
         padding: var(--m-space);
         background-size: 100%;
@@ -848,6 +853,12 @@ footer {
 @media screen and (max-width: 480px) {
     :root {
         font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    section.hero {
+        background-size: 45%;
     }
 }
 
