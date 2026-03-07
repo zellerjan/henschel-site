@@ -850,7 +850,7 @@ footer {
 div.scroll-watcher {
     position: fixed;
     top: 90;
-    height: 2px;
+    height: 3px;
     background-color: var(--orange);
     width: 100%;
     z-index: 10;
