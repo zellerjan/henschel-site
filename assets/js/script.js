@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // TILT EFFECT 
     $('[data-tilt]').tilt({
-        maxTilt: 20,
+        maxTilt: 10,
         perspective: 5000,
         easing: "cubic-bezier(.03,.98,.52,.99)",
         glare: true,
