@@ -845,6 +845,11 @@ footer {
             order: -1;
         }
     }
+
+    /* remove effect on mobile */
+    .imageContainer {
+        filter: saturate(100%);
+    }
 }
 
 
@@ -859,6 +864,17 @@ footer {
 @media screen and (min-width: 1500px) {
     section.hero {
         background-size: 45%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    section.features {
+        max-width: 2200px;
+        margin: 0 auto;
+
+        & div.gallery {
+            grid-template-rows: repeat(6, 300px);
+        }
     }
 }
 
@@ -901,4 +917,39 @@ div.scroll-watcher {
 
     }
 
+}
+
+
+/* add gallery effect only for desktop */
+
+
+/* Styles for Gallery Mosaik */
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    filter: saturate(80%);
+    transition: filter ease 0.5s;
+    line-height: 0;
+    width: 100%;
+}
+
+.imageContainer:hover {
+    filter: saturate(120%);
+}
+
+.imageContainer .image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imageContainer canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
 }
