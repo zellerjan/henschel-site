@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initHeroParallax();
 
-    // --- THREE JS MOSAIC GALLERY ---
+    // ----------- THREE JS MOSAIC GALLERY -------------
     const vertexShader = `
     varying vec2 vUv;
     void main() {

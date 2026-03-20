@@ -920,15 +920,12 @@ div.scroll-watcher {
 }
 
 
-/* add gallery effect only for desktop */
-
-
 /* Styles for Gallery Mosaik */
 .imageContainer {
     position: relative;
     overflow: hidden;
     display: block;
-    filter: saturate(80%);
+    filter: saturate(90%);
     transition: filter ease 0.5s;
     line-height: 0;
     width: 100%;
