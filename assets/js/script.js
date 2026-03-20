@@ -224,7 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---------- add fade in function-------------
+
+    
+    // ---------- ADD FADE IN FUNCTION FOR LIST OF ELEMENTS -------------
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
