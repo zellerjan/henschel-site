@@ -316,6 +316,9 @@ section.hero {
 
 /* -------- QUOTE SECTION  */
 section.quote {
+    position: relative;
+
+    
     & .wrapper {
         display: flex;
         flex-direction: column;
@@ -328,6 +331,12 @@ section.quote {
 
     & a.button-light {
         align-self: auto;
+    }
+
+    & .svg-stripes {
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
 }
 
@@ -637,7 +646,6 @@ footer {
     }
 }
 
-
 /* ######## TABLET MEDIA QUERY ############ */
 @media screen and (max-width: 750px) {
 
@@ -852,8 +860,6 @@ footer {
     }
 }
 
-
-
 /* ######## MOBILE MEDIA QUERY ############ */
 @media screen and (max-width: 480px) {
     :root {
@@ -861,12 +867,14 @@ footer {
     }
 }
 
+/* ######## FOR WIDER SCREENS ######### */
 @media screen and (min-width: 1500px) {
     section.hero {
         background-size: 45%;
     }
 }
 
+/* ####### ULTRA WIDE SCREENS ########## */
 @media screen and (min-width: 2000px) {
     section.features {
         max-width: 2200px;
