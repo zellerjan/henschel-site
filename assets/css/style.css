@@ -318,7 +318,16 @@ section.hero {
 section.quote {
     position: relative;
 
-    
+    & line {
+        transition: stroke-width ease-in-out 300ms;
+        border: 5px solid transparent;
+    }
+
+    & figure.svg-stripes svg line:hover {
+        stroke-width: 2px;
+    }
+
+
     & .wrapper {
         display: flex;
         flex-direction: column;

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         autoplay: true,
-        interval: 1500,
+        interval: 2000,
         pauseOnHover: false,
         perMove: 1,
         easing: 'ease',
@@ -204,5 +204,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('load', () => {
         document.querySelectorAll(".imageContainer").forEach(createMosaicInstance);
+    });
+
+
+    // ------------- GSAP SETTINGS FOR SVG -----------------
+    gsap.from(".line-horizontal, .line-vertical", {
+        duration: 2,
+        attr: { x2: 0, y2: 0 }, // Shrink lines to their start point
+        opacity: 0,
+        stagger: {
+            each: 0.1,
+            from: "center" // Can be "center", "end", or "random"
+        },
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".quote",
+            start: "top 70%",
+            toggleActions: "play pause resume reset"
+        }
+    });
+
+    // ---------- add fade in function-------------
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+                // This stops the observer from ever looking at this element again
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll("h1, h2, h3, h4, p, a, article, label, input, textarea, .imageContainer").forEach(el => {
+        el.style.transition = "opacity 0.4s ease-in, transform 0.4s ease-out";
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+
+        observer.observe(el);
     });
 });
