@@ -14,8 +14,8 @@ The goal of this school project was to transform a text-heavy Wikipedia entry in
 In about 8 hours I designed a OnePager in Figma, where I established a quick design system using components, text styles, and variables for fonts, gaps, colors, and typography, while ensuring high accessibility standards throughout the layout.
 
 Check out the Figma Prototype. 
--[Mobile](https://www.figma.com/proto/D88McSdbTLRfUvFaQxMiSw/ResponsiveDesign_VisualDesign?node-id=210-816&p=f&viewport=1636%2C225%2C0.09&t=ot2v4iQDxbi6E8OK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=210%3A816&page-id=210%3A815)
--[Desktop](https://www.figma.com/proto/D88McSdbTLRfUvFaQxMiSw/ResponsiveDesign_VisualDesign?node-id=210-325&viewport=328%2C286%2C0.43&t=6tsUFq7Jg53I6MjH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=210%3A325&page-id=210%3A215)
+- [Mobile](https://www.figma.com/proto/D88McSdbTLRfUvFaQxMiSw/ResponsiveDesign_VisualDesign?node-id=210-816&p=f&viewport=1636%2C225%2C0.09&t=ot2v4iQDxbi6E8OK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=210%3A816&page-id=210%3A815)
+- [Desktop](https://www.figma.com/proto/D88McSdbTLRfUvFaQxMiSw/ResponsiveDesign_VisualDesign?node-id=210-325&viewport=328%2C286%2C0.43&t=6tsUFq7Jg53I6MjH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=210%3A325&page-id=210%3A215)
 
 ## 📲 Prototype Notes
 The transition from Figma to code focused on maintaining visual fidelity while enhancing the user experience through meaningful motion.
