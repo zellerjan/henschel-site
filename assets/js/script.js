@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll("h1, h2, h3, h4, p, a, article, label, input, textarea, .imageContainer").forEach(el => {
+    document.querySelectorAll("h1, h2, h3, h4, p, a, b, article, label, input, textarea, .imageContainer").forEach(el => {
         el.style.transition = "opacity 0.4s ease-in, transform 0.4s ease-out";
         el.style.opacity = "0";
         el.style.transform = "translateY(20px)";

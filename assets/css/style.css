@@ -1,5 +1,5 @@
 /* 
-Version 2.2
+Version 3.0
 Autor: Jan Zeller 
 */
 
@@ -797,6 +797,16 @@ footer {
     section.quote {
         & h4 {
             max-width: 100%;
+        }
+
+        & .svg-stripes {
+            right: -20px;
+            bottom: -80px;
+
+            & svg {
+                width: 472px;
+                height: 253px;
+            }
         }
     }
 
