@@ -800,11 +800,10 @@ footer {
         }
 
         & .svg-stripes {
-            right: -20px;
             bottom: -80px;
 
             & svg {
-                width: 472px;
+                width: 100vw;
                 height: 253px;
             }
         }
@@ -874,7 +873,7 @@ footer {
     }
 
     /* remove effect on mobile */
-    .imageContainer {
+    figure.imageContainer {
         filter: saturate(100%);
     }
 }
