@@ -225,25 +225,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    
+
     // ---------- ADD FADE IN FUNCTION FOR LIST OF ELEMENTS -------------
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+    // Check if the screen is wider than 750px
+    if (window.innerWidth >= 750) {
 
-                // This stops the observer from ever looking at this element again
-                observer.unobserve(entry.target);
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Select your elements
+        const elementsToFade = document.querySelectorAll("h1, h2, h3, h4, p, a, b, article, label, input, textarea, .imageContainer");
+
+        elementsToFade.forEach(el => {
+            // Only apply the "hidden" styles if we are on desktop
+            el.style.transition = "opacity 0.4s ease-in, transform 0.4s ease-out";
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+
+            observer.observe(el);
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll("h1, h2, h3, h4, p, a, b, article, label, input, textarea, .imageContainer").forEach(el => {
-        el.style.transition = "opacity 0.4s ease-in, transform 0.4s ease-out";
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
-
-        observer.observe(el);
-    });
+    }
 });

@@ -776,13 +776,14 @@ footer {
     }
 
     main>section {
-        padding: var(--l-space) var(--m-space);
+        padding: var(--xl-space) var(--m-space);
 
         & .wrapper {
             max-width: 100%;
 
             & .section-content {
                 flex-direction: column;
+                gap: var(--m-space);
             }
         }
     }
