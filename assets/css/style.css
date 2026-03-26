@@ -642,7 +642,7 @@ footer {
 }
 
 
-/* ######## TABLET MEDIA QUERY ############ */
+/* ######## LANDSCAPE TABLET MEDIA QUERY ############ */
 @media screen and (max-width: 1030px) {
     section.hero {
         grid-template-columns: 4fr 4fr;

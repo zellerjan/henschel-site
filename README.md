@@ -33,3 +33,5 @@ The transition from Figma to code focused on maintaining visual fidelity while e
     - **Micro-interactions:** Simple fade-in effects are triggered during scrolling to soften the content delivery and improve the "responsive" feel.
 
 This project was a deep dive into the intersection of industrial aesthetics and modern web performance. Translating a technical, text-heavy Wikipedia entry into a functional, responsive prototype within a four-day window required a strict balance between high-fidelity design and efficient code execution.
+
+**Check out the final site: [Henschel DHG 700 C](https://henschel.janzeller.ch/)**
